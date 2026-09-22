@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { profileData } from '../data/profile';
+import { audioController } from '../utils/audio';
 
 interface BootSequenceProps {
   onComplete: () => void;
@@ -23,14 +24,21 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
   const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
+    audioController.startBootSequence();
+    return () => audioController.stopBootSequence();
+  }, []);
+
+  useEffect(() => {
     if (currentLog < bootLogs.length) {
       const timer = setTimeout(() => {
         setCurrentLog(prev => prev + 1);
         setProgress(Math.floor(((currentLog + 1) / bootLogs.length) * 100));
-      }, 150 + Math.random() * 200); // random delay for realism
+        audioController.playTypingSound();
+      }, 300 + Math.random() * 500); // Slower, more suspenseful delay
       return () => clearTimeout(timer);
     } else {
-      const timer = setTimeout(() => setIsDone(true), 800);
+      audioController.playOnlineSound();
+      const timer = setTimeout(() => setIsDone(true), 2500); // Wait longer for voice to finish
       return () => clearTimeout(timer);
     }
   }, [currentLog]);
