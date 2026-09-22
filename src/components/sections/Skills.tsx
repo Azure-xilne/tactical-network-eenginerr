@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { skillCategories, technicalArsenal } from '../../data/skills';
-import { Network, Terminal, Shield, Cpu, Activity, Server, HardDrive } from 'lucide-react';
 
 // Custom skill grid background for the Skills section
 const GridBackground = () => (

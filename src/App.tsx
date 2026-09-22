@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BootSequence } from './components/BootSequence';
 import { GlobalBackground } from './components/background/GlobalBackground';
 import { Navbar } from './components/layout/Navbar';

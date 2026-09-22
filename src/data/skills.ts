@@ -1,4 +1,4 @@
-import { type LucideIcon, Network, Server, Terminal, Shield, Wifi, HardDrive, Cpu, Activity } from 'lucide-react';
+import { Network, Server, Terminal, Shield, HardDrive, Cpu, Activity } from 'lucide-react';
 
 export interface SkillCategory {
   title: string;

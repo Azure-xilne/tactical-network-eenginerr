@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Network, Server, Monitor, Router, Shield, Cloud } from 'lucide-react';
 

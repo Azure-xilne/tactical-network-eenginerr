@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { profileData } from '../../data/profile';
-import { Database, Shield, Terminal, Cpu } from 'lucide-react';
+import { Database, Shield } from 'lucide-react';
 
 export const About = () => {
   return (

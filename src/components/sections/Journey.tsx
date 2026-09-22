@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { journeyData, certificationsData } from '../../data/journey';
-import { ChevronDown, Award } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 export const Journey = () => {
   return (

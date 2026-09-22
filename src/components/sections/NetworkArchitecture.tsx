@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { NetworkTopology as NetworkMap } from '../background/NetworkTopology';
 
 export const NetworkArchitecture = () => {

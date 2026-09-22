@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { projectsData } from '../../data/projects';
-import { Terminal, Crosshair, ChevronRight } from 'lucide-react';
+import { Terminal, Crosshair } from 'lucide-react';
 
 export const Projects = () => {
   return (

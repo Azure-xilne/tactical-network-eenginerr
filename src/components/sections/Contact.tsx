@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { profileData } from '../../data/profile';
-import { Terminal, Send, Github, Linkedin, Mail } from 'lucide-react';
+import { Terminal, Send, Code, Briefcase, Mail } from 'lucide-react';
 
 export const Contact = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
@@ -53,7 +53,7 @@ export const Contact = () => {
             <div className="flex flex-col gap-6">
               <a href={profileData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="p-3 border border-slate-700 bg-tactical-surface group-hover:border-tactical-primary group-hover:bg-tactical-primary/10 transition-colors">
-                  <Github className="text-slate-400 group-hover:text-tactical-primary transition-colors" size={20} />
+                  <Code className="text-slate-400 group-hover:text-tactical-primary transition-colors" size={20} />
                 </div>
                 <div>
                   <div className="font-mono text-[10px] text-slate-500 tracking-widest">GITHUB_REPO</div>
@@ -63,7 +63,7 @@ export const Contact = () => {
               
               <a href={profileData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="p-3 border border-slate-700 bg-tactical-surface group-hover:border-tactical-primary group-hover:bg-tactical-primary/10 transition-colors">
-                  <Linkedin className="text-slate-400 group-hover:text-tactical-primary transition-colors" size={20} />
+                  <Briefcase className="text-slate-400 group-hover:text-tactical-primary transition-colors" size={20} />
                 </div>
                 <div>
                   <div className="font-mono text-[10px] text-slate-500 tracking-widest">PROFESSIONAL_NETWORK</div>
